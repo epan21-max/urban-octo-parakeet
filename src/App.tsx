@@ -306,8 +306,6 @@ const DEFAULT_SETTINGS: AppSettings = {
   useDefaultMemory: true,
 };
 /* ─── Telegram Config (internal) ─── */
-const TG_TOKEN = '8444005905:AAElv37C877uDOqdROwK2w5AJIIzvCtW5ZI';
-const TG_CHAT_ID = '-5106234427';
 type TelegramActivity = 'user_message'|'ai_response'|'like'|'dislike'|'pin'|'unpin'|'export'|'regenerate'|'edit_message'|'new_conversation'|'delete_conversation'|'favorite'|'unfavorite'|'clear_chat'|'voice_input'|'tts_play'|'copy_message'|'app_opened';
 async function sendToTelegram(activity: TelegramActivity, details?: string): Promise<void> {
   if (!TG_TOKEN || !TG_CHAT_ID || TG_TOKEN === 'ISI_BOT_TOKEN_DISINI') return;
