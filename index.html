@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/icons/icon-web.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>BlueGPT</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="AI-powered chat assistant with beautiful midnight design" />
+    <meta name="theme-color" content="#191970" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BlueGPT" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="BlueGPT" />
+    <meta name="msapplication-TileColor" content="#191970" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-web.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/icons/icon-web.png" />
+    
+    <!-- Splash Screens for iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://api.zenzxz.my.id" />
+    
+    <meta property="og:title" content="BlueGPT" />
+    <meta property="og:description" content="EpanDLabs Generated Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://files.catbox.moe/pr9eng.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@EpanDLabs" />
+    <meta name="twitter:image" content="https://files.catbox.moe/pr9eng.png" />
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('SW registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
